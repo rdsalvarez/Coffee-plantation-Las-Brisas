@@ -1,0 +1,484 @@
+
+/*applies a universal reset and style to all elements (* means every element on the page).*/
+
+*{
+    margin: 0;   /*Removes the default margin from all elements.*/
+    padding: 0;  /* removes the default padding from all elements.*/
+    box-sizing: border-box;/* It changes how the total width/height 
+                           of an element is calculated.With border-box, 
+                           padding+borders are included within width + height you set.*/
+    font-family: 'Merriweather', serif;/*Sets the default font for the whole page to 
+                                      Merriweather, falling back to a generic serif if not available.*/
+}
+
+              /*.all-content → Targets elements with the class all-content.*/
+.all-content{ /*Any element with the class all-content will have a background color of #f7f5f2,*/ 
+  background: #f7f2f2; /*which is a very light beige or off-white shade.*/
+}
+
+
+html::-webkit-scrollbar-track{ /*Targets the entire webpage.Specifically targets the scrollbar track (the area behind the scrollbar thumb).*/
+  background: transparent;/*Makes that track see-through (so the page background shows through it).*/
+}
+
+html::-webkit-scrollbar-thumb{ /*his is a pseudo-element that styles the scrollbar thumb*/
+  background: #b2744c;/*background:#b2744c;Sets the color of the scrollbar thumb to a warm brownish-orange shade*/
+  border-radius: 10px;/*Rounds the edges of the scrollbar thumb, giving it a smooth, pill-like look*/
+}
+
+html::-webkit-scrollbar{/*html::-webkit-scrollbar: This targets the scrollbar of the entire webpage.*/
+  width: 10px;/*This defines the width of the scrollbar to be 10 pixels*/
+}
+
+
+/* navbar */
+#navbar{ /*This targets any HTML element with the id="navbar".*/
+  background-color: #b2744c; /*Sets the background color of that element to a warm brownish-orange color.*/
+  font-family: 'Roboto', sans-serif;/*Changes the text font inside #navbar to use the Roboto font */
+}
+
+
+#logo img{       /*targets any <img> inside an element with the ID logo*/
+  border-radius: 10px; /*Rounds the corners of the image slightly, giving it a softer, rounded look*/
+  width: 125px; /*Sets the image width to 160 pixels.*/
+  height: 125px;
+  margin-left: 20px;/*Pushes the image 40 pixels to the right by adding space on the left*/
+}
+
+
+.navbar-nav{ /*adds horizontal space (50px) to the left of any element with the navbar-nav class*/
+  margin-left: 50px;
+}
+
+
+.nav-item .nav-link{ /*is styling each link inside your navbar*/
+  color: black;/*Sets the link text color to black*/
+  margin-left: 10px;/*Adds 10px of space to the left of the link (spacing links out from each other)*/
+  font-weight: bold;/*Makes the link text bold*/
+  transition: 0.5s;/*Adds a smooth transition effect (for hover states, etc.) over half a second*/
+}
+
+
+.nav-item .nav-link:hover{ /*This targets any .nav-link inside a .nav-item, when the user hovers over it.*/
+  background: #f7f5f2;/*Sets the background color to a very light beige (off-white).*/
+  border-radius: 5px;/*Rounds the corners of the background slightly (5px radius).*/
+  color: black;/*Ensures the text remains black on hover.*/
+}
+
+
+#navbar form button{ /*Any <button> inside a <form> that's inside an element with the ID #navbar usually a search or login form inside your navigation bar*/
+  background: black;
+  color: white;
+  border: 1px solid white;/*Gives it a white border, 1 pixel thick*/
+}
+
+/* navbar */
+
+
+
+/* Start home content */
+#home{ /*Any element with the ID home — usually a hero section or landing section at the top of your page.*/
+    width: 100%;/*The element stretches to full width of the screen.*/
+    height: 70vh;/*The height is 90% of the viewport height (vh = viewport height unit*/
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./images/mugs.jpg);/*Applies two background layers: a semi-transparent black gradient on top of a background image. This darkens the image for better text contrast.*/
+    background-repeat:repeat;/*The background image will not repeat — one image only.*/
+    background-size: contain;/*The image will scale up/down to cover the entire area without distortion.*/
+    background-position: 80%;/*Positions the background image 80% from the left. It likely shows a specific part of the image*/
+    font-family: 'Roboto', sans-serif;/**/
+}
+
+.content{
+  padding-top: 50px;
+  margin-left: 56px;
+  margin-top: 0px;
+}
+
+
+.content p{
+  margin-top: 10px;
+  color: white;
+}
+
+.content h3{
+  margin-top: 10px;
+  color: white;
+}
+
+
+#btn{ /*This CSS rule styles a button with the ID btn*/
+  width: 150px;/*Sets the width of the button to 150 pixels*/
+  height: 36px;/*Sets the height to 36 pixels*/
+  margin-top: 20px;/*Adds space above the button*/
+  background: white;/*Sets the background color to white*/
+  border-radius: 5px;/*Rounds the corners with a radius of 5 pixels*/
+  font-weight: bold;/*Makes the button text bold*/
+  border: none;/*Removes the default border*/
+  transition: 0.5s ease;/*Adds a smooth transition effect for hover or focus state changes*/
+  cursor: pointer;/*Changes the cursor to a pointer when hovering, indicating it’s clickable*/
+}
+ 
+
+#btn:hover{/*Defines the hover effect for the button with ID btn*/
+  background: #b2744c; /* Changes the background color on hover to a warm brown-orange */
+  color: white;/* Changes the text color to white */
+}
+
+/* End home content */
+
+
+/* Start About Section */
+
+#about{
+  width: 100%;
+  height: 200vh;
+  background: #eedfc7;
+  font-family: 'Roboto', sans-serif;
+}
+
+#about .container{
+  padding-top: 70px;
+}
+
+.heading{
+  text-align: center;
+  margin-bottom: 50px;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.col-md-6 p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  text-align: left;
+  bottom: 10px;
+  color: black;
+}
+
+.col-md-4 p1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  text-align: left;
+}
+
+
+#opciones1 {
+  margin-top: 40px;
+}
+
+.heading span{
+  color: #8b4a22;
+}
+#about .card{
+  border-radius: 10px;
+}
+
+#about .card img{
+  border-radius: 10px;
+}
+
+#about-btn{
+  width: 200px;
+  height: 36px;
+  background: transparent;
+  border: 2px solid #b2744c;
+  color: #b2744c;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+#about-btn:hover{
+  background: #b2744c;
+  color: white;
+}
+
+
+
+
+@media screen and (max-width:982px){
+  #about p{
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width:766px){
+  #about p{
+    font-size: 15px;
+  }
+  #about{
+    height: 120vh;
+  }
+}
+
+.same-size {
+  height: 100px;     /* or any height you want */
+  object-fit: cover; /* crop to fill container without distortion */
+  width: 50%;       /* fill the column width */
+  border-radius: 8px; /* optional styling */
+}
+
+/* about */
+
+
+/* product */
+.product{
+  width: 100%;  /* Makes the element span the entire width of its parent */
+  background: #f7f5f2;/* Sets a soft, light beige background color */
+  font-family: 'Roboto', sans-serif;/* Uses the Roboto font, with sans-serif as a fallback */
+}
+
+.heading4{/*this CSS rule styles an element with the class .heading4*/
+  text-align: center;/* Centers the text horizontally */
+  color: #b2744c;/* Sets the text color to a warm brownish tone */
+  font-size: 30px;/* Makes the text 30 pixels tall — fairly large for a heading */
+  font-weight: bold;/* Makes the text bold */
+  padding-top: 70px;/* Adds 70 pixels of space above the heading */
+  border-bottom: 2px solid #b2744c; /* Draws a 2px solid underline using the same brown color */
+}
+
+#container3{ 
+  margin-top: 30px;/*You typically use margin-top like this when you want to create space between stacked sections*/
+}
+
+.product h3{
+  text-align: center;
+  color: #b2744c;
+  font-size: 23px;
+}
+.product p{
+  color: #b2744c;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.product p span{/*Any <span> that is inside a <p> tag, which is inside an element with the class product.*/
+  float: right;/*This makes the <span> move to the right side of the <p> tag — like it's floating over there.*/
+  cursor: pointer;/*Changes the cursor to a hand icon (🖱️👉) when someone hovers over it — like it’s clickable, even if it’s not a button or link.*/
+}
+
+.cart-popup {
+  position: fixed;
+  bottom: -100px; /* Start hidden */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 9999;
+}
+
+.cart-popup.show {
+  bottom: 30px;
+  opacity: 1;
+}
+
+/* product */
+
+
+
+
+
+
+
+/* gallary */
+#gallery{
+  width: 100%;
+}
+#gallery h1{
+  text-align: center;
+  color: black;
+  margin-top: 60px;
+  font-weight: bold;
+}
+#gallery h1 span{
+  color: #b2744c;
+}
+#gallery .card{
+  border-radius: 10px;
+}
+#gallery .card img{
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;/*Add CSS for Hover Zoom*/
+}
+
+.card:hover img {/*This makes images gently zoom in on hover.*/
+  transform: scale(1.05);
+}
+
+.card a img {/*tag don’t stretch out and stay nicely inside their cards.Images fill the card width (but don’t overflow),
+  Keep their proportions,Display cleanly in the layout*/
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease; /*Add CSS for Hover Zoom*/
+}
+
+/* End gallery */
+
+
+
+
+/* contact */
+.contact{
+  width: 100%;
+  height: 120vh;
+  background: #f7f5f2;
+  padding-top: 70px;
+}
+
+.contact .container{
+  width: 100%;/*Makes the container take up the full width of its parent.*/
+  height: 80vh;/*Sets the height to 80% of the viewport height (the visible screen height)*/
+  background: white;
+  background: linear-gradient(90deg, white 80%, #b2744c 20%);/*This creates a horizontal gradient:White covers 80% of the width from the left.
+                                                                  #b2744c (that warm coffee brown) covers the remaining 20% on the right.90deg means 
+                                                                  it flows from left to right.*/
+  border-radius: 10px;
+}
+
+.heading6{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 70px;
+}
+
+.heading6 span{
+  color: #b2744c;
+}
+
+.contact p{
+  font-weight: bold;
+  font-size: 13px;
+  color: black;
+}
+
+.contact input{
+  width: 360px;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+#contact-btn{
+  width: 200px;
+  height: 36px; 
+  border: none;
+  background: #b2744c;
+  color: white;
+  font-weight: bold;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+#col{
+  width: 40%;
+  height: 56vh;
+  background: black;
+  margin-top: 78px;
+  margin-bottom: 20px;
+}
+
+.contact h1{
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.contact #col p{
+  font-size: 15px;
+  color: white;
+  margin-left: 13px;
+  padding-top: 30px;
+}
+
+
+/*That’s a media query, and it's doing a great job making your contact section responsive 
+(i.e., adjusting the layout and styling for smaller screens).*/
+@media screen and (max-width:766px){/*“Apply the following styles only when the screen is 766px wide or smaller,”
+  i.e., on phones and small tablets.*/ 
+  .contact .container{ /*Styles Inside the Media Query: .contact .container*/
+  background: white;
+  }
+  #col{/*Makes the right column (which had the contact info) full width on small screens.*/
+    width: 100%;
+    background: #b2744c;
+  }
+  .contact{/*Increases the total height of the contact section to 150% of the screen height.
+           This makes sure everything fits nicely and doesn’t get squished vertically on smaller devices.*/
+    height: 150vh;
+  }
+}
+@media screen and (max-width:400px){
+  .contact input{
+    width: 250px;
+  }
+  
+}
+/* contact */
+
+/* footer */
+#footer{
+  width: 100%;
+  background: #b2744c;
+  margin-top: 50px;
+}
+.footer-logo img{
+  width: 180px;
+  border-radius: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+#footer .socail-links i{
+  font-size: 17px;
+  margin-left: 10px;
+  margin-top: 30px;
+  padding: 10px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.credite{
+  color: white;
+  margin-top: 20px;
+}
+.credite{
+  text-shadow: 0px 0px 1px black;
+}
+.credite a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.credite a span{
+  color: black;
+}
+.copyright span{
+  color: black;
+}
+/* footer */
+html{
+  scroll-behavior: smooth;
+}
+.arrow{
+  position: fixed;
+  border-radius: 50px;
+  height: 50px;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: black;
+}
