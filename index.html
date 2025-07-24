@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<!--.........Started April 4,2025 ................-->
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title> Home | Las Brisas</title>
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="Venta y produccion de cafe de finca Las Brisas en Apaneca, Ahuachapan, El Salvador" />
+<meta name="keywords" content="Cafe, Coffee, Borboun, Pacamara, Pacas, Castillo, Apaneca, El Salvador, Las Brisas, Gourmet, Coffee Plantation" />
+<meta name="author" content="Rafael Schneider" />
+<!--Bootstrap links-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!--Bootstrap links-->
+<!--Fonts link-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<!--Fonts link-->
+<!--Include Lightbox2. Clicking an image opens a full-screen popup with a larger version (super polished look)-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+<!--Include Lightbox2-->
+<!-- AOS CSS (Animate On Scroll) is a small JavaScript library that adds scroll-based animations to your website.Makes elements,fade, slide,zoom,or flip into view as you scroll down the page.-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+<!-- AOS CSS-->
+<script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="all-content"> <!-- This is not a bootstrap element-->
+    <nav class="navbar navbar-expand-lg" id="navbar"><!-- Nav start / lg=large;bg=background-->
+      <div class="container-fluid"> <!--creates a full-width container that spans 100% of the viewport width, regardless of screen size-->
+        <a class="navbar-brand" href="#" id="logo"><img src="./images/logonegro.png" height="60px" width="60px" alt=""></a>
+            <!--<a>: Anchor tag used to create a clickable link;href="#" makes the logo clickable;id="logo" adds a unique identifier-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fa-solid fa-bars" style="color: white;font-size: 23px;"></i></span>
+          <!--class="navbar-toggler"=Bootstrap class that styles the button to look like a toggler (usually hidden on large screens, shown on small screens);
+          type="button"=specifies the button type; data-bs-toggle="collapse"= this button toggles a collapsible element;
+          data-bs-target="#navbarSupportedContent"=targets the element with that ID to collapse/expand;
+          aria-controls="navbarSupportedContent"=accessibility feature,tells screen readers what this button controls;
+          aria-expanded="false"=indicates the initial state (not expanded). This updates to true when the menu is open;
+          aria-label="Toggle navigation"= Screen reader label,makes the button understandable for users with assistive tech;
+          <span> ... </span>= A basic inline container.
+          This is a Font Awesome icon: fa-solid → uses the solid icon style.
+          fa-bars → shows the hamburger menu icon (☰).uses Font Awesome to show a hamburger icon (☰);Custom color:rgb(113,3,3)Font size:23px;
+           --> 
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!--This is the collapsible section of the Bootstrap navbar,contains all menu links like Home, About, Contact, etc. and optionally other things like a search bar;
+          collapse=A Bootstrap class that enables collapsible behavior;
+          navbar-collapse=A Bootstrap class that styles this div specifically for navbar content that should collapse on small screens.-->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!--<ul> — Unordered List;
+            class="navbar-nav=Bootstrap class that styles the list (<ul>) as a navigation menu within a navbar.Applies proper spacing + alignment for nav items.
+            me-auto=me = margin-end (which is margin-right in left-to-right languages),auto = automatically pushes element as far to the left as possible.
+            Often used to push other elements (like a login button or search bar) to the right.-->
+              <li class="nav-item"> <!--creates a list item in your unordered list (<ul>) and tells Bootstrap, “Hey, this is a navigation item.--> 
+                <a class="nav-link active" aria-current="page" href="#">Home</a><!--nav-link: Applies Bootstrap styles for nav links — spacing, color, hover effects, etc.
+                active: Indicates that this link is the currently active page (usually highlighted in the navbar).
+                aria-current="page"= This is an accessibility attribute (ARIA = Accessible Rich Internet Applications).
+                It tells screen readers that this is the link for the current page, improving usability for visually impaired users.
+                href="#"=This is the destination of the link. # means "stay on this page" — just a placeholder.In a real app, you'd replace
+                it with something like href="/home".-->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a><!--href="#about"=This is the destination of the link. -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#product">Products</a>
+             </li>
+              <li class="nav-item">
+               <a class="nav-link" href="#gallery">Gallery</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#contact">Contact</a>
+              </li>
+          </ul>
+            <form class="d-flex" role="search" action="https://www.google.com/search" method="GET" target="_blank"><!--You're using a Bootstrap search form here — super clean and responsive.
+              d-flex: Makes the form a flexbox container, placing its children (input + button) in a row. Role search="search": 
+              action=Google will search the entire web; method=; target blank =is optional — it just opens the results in a new tab;
+              Adds semantic meaning for screen readers — tells assistive tech that this is a search area.-->
+              <input  class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+              <!--form-control: Bootstrap class to make it look clean and full-width within its flex container.
+              me-2: Adds right margin (or “margin-end” in Bootstrap 5+) of 0.5rem to separate it from the button.
+              type="search": Identifies it as a search field (functionally similar to text, but better for accessibility).
+              placeholder="Search": Text inside the box before anything is typed.
+              aria-label="Search": For screen readers — says “this is a search field.”-->
+              <button class="btn btn-outline-success" type="submit">Search</button>
+              <!--btn: Base Bootstrap button class.
+              btn-outline-success: Gives it a green border and text, transparent background — changes to green when hovered/clicked.
+              type="submit": Submits the form when clicked.-->
+            </form>
+        </div>
+      </div>
+    </nav>  <!-- Nav end-->
+
+
+<!--Start Home section-->
+
+<section id="home">
+  <div class="content">
+    <h3>Start Your Day With a <br> Fresh Coffee</h3>
+    <p>Small farm...Exorbitant flavors.......
+
+      We invite you to enrich your palate through the exotic tastes of the different coffees
+      of Las Brisas Coffee plantation which is  located 1,500 meters above sea level on
+      the mountains of Apaneca, Ahuachapan, were the rich seacoast air mixes with the volcanic soil
+      and the natural forests.....
+       
+    </p>
+    <button id="btn"  href="#product">Shop Now</button>
+
+  </div>
+</section>
+
+
+<!--Start About -->
+
+
+  <div class="about" id="about"><!--The id="about" is use for navigation, class="about" is for styling. -->
+    <div class="content"> 
+      <div class="heading"><!--Create a heading that says "About US".-->
+        <h2>About <span>US</span></h2>
+        <div class="row" id="opciones1"> <!--Image and Description (Two-column layout)-->
+          <div class="col-md-6"><!--Bootstrap row with two columns (each half the width on medium+ screens). 1 side shows an image, + other shows a paragraph about the coffee farm-->
+              <div class="card">
+                <a href="./images/paisaje.jpg" data-lightbox="gallery"><!--Lightbox Viewer-->
+                  <img src="./images/paisaje.jpg" alt="">
+                </a>
+              </div>
+          </div >
+          <div class="col-md-6"><!--Bootstrap row with two columns (each half the width on medium+ screens). 1 side shows an image, + the other shows a paragraph about the coffee farm-->
+            <p> 
+  Las Brisas (Breezes in English) is the name 
+  of a family owned plantation that grows coffee in 
+  El Salvador, Central America. It is  
+  located on the southwest part of the country a 
+  few miles from a small colonial town called 
+  <em>Apaneca</em> aproximatly 1 and ½ hour from 
+  San Salvador, capital city of El Salvador.</p>
+          </div>
+          
+        <div class="row" id="opciones1"><!--Three Linked Cards (Image + Text Links) -->
+            <div class="col-md-4"><!--Bootstrap's col-md-4 makes each column one-third of the row. History Card -->
+                <div class="card">
+                  <img src="./images/escritura3.png" class="img-fluid" alt=""><!--An image-->
+                  <a href="./images/History.html" class="d-block mt-2" style="text-decoration: none; font-weight: bold; color: #b2744c;"><!--A clickable text link below the image-->
+                    History
+                  </a> 
+                </div>
+            </div >
+            <div class="col-md-4"><!-- Bootstrap's col-md-4 makes each column one-third of the row.Varieties Card -->
+                <div class="card">
+                  <img src="./images/maduro2.png" class="img-fluid" alt=""><!--An image-->
+                  <a href="./images/Varieties.html" class="d-block mt-2" style="text-decoration: none; font-weight: bold; color: #b2744c;"><!--A clickable text link below the image-->
+                    Varieties
+                  </a>
+                </div>
+            </div >
+            <div class="col-md-4"><!-- Bootstrap's col-md-4 makes each column one-third of the row.Tasks Card -->
+                <div class="card">
+                  <img src="./images/corte2.png" class="img-fluid" alt=""><!--An image-->
+                  <a href="./images/Farmtasks.html" class="d-block mt-2" style="text-decoration: none; font-weight: bold; color: #b2744c;"><!--A clickable text link below the image-->
+                    Tasks
+                  </a>
+                </div>
+            </div >
+        </div>  
+      </div>
+    </div>
+  </div>
+  </div>
+<!--End About ->
+
+<!--Start products. This section code creates a "Products" showcase using Bootstrap's grid system + cards.-->
+<!---->
+<section id="product" class="product"><!--his defines a section on the page, labeled with id="product"(for linking/styling)+the class product(for your custom CSS).-->
+  <div class="container"> <!--This wraps the section heading "Products" in a Bootstrap container for proper horizontal padding and alignment-->
+  <div class="heading4">Products</div><!--heading4 is a custom class (probably defined in your CSS) to style the title.-->
+</div>
+  <div class="container" id="container3">
+
+    <div class="row"><!-- Four Columns (One for Each Product) -->
+      <div class="col-md-3 py-3 py-md-0"><!--Uses Bootstrap’s grid system to organize 4 products in a row:Each product is inside a col-md-3 div
+                                         (i.e., 3 columns wide on medium screens and larger — 4 items per row total).
+                                         The py-3 py-md-0 adds vertical padding on smaller screens and removes it on medium+ screens.--->
+        <div class="card"> <!--Each product card is built like this-->
+              <img src="./images/muestra1.png" alt=""><!--Image: Displays the coffee image-->
+              <div class="card-body"><!--Card Body: Contains:-->
+                <h3>Borboun Coffee</h3><!--Product Name (e.g. Borboun Coffee)-->
+                <p>$12.00/lb <strike>$15.00/lb</strike><span onclick="showCartMessage()"><i class="fa-solid fa-cart-shopping"></i></span></p><!--Price: Shows the current price and a struck-through original price for visual promotion.
+                🛒 Shopping Cart Icon: From Font Awesome, inside a <span>-->
+              </div>
+        </div>
+      </div>
+      <div class="col-md-3 py-3 py-md-0">
+        <div class="card">
+          <img src="./images/muestra2.png" alt="">
+          <div class="card-body">
+            <h3>Pacamara Coffee</h3>
+          <p>$15.00/lb <strike>$17.00/lb</strike> <span onclick="showCartMessage()"><i class="fa-solid fa-cart-shopping"></i></span></p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 py-3 py-md-0">
+        <div class="card">
+          <img src="./images/muestra3.png" alt="">
+          <div class="card-body">
+            <h3>Pacas Coffee</h3>
+          <p>$11.00/lb <strike>$13.00/lb</strike> <span onclick="showCartMessage()"><i class="fa-solid fa-cart-shopping"></i></span></p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 py-3 py-md-0">
+        <div class="card">
+          <img src="./images/muestra4.png" alt="">
+          <div class="card-body">
+            <h3>Castillo Coffee</h3>
+          <p>$9.00/lb <strike>$11.00/lb</strike> <span onclick="showCartMessage()"><i class="fa-solid fa-cart-shopping"></i></span></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="cart-message" class="cart-popup">No products are available right now.</div>
+
+
+</section>
+
+<!-- End products-->
+
+<!-- Start our gallery... HTML code creates a gallery section on a webpage, with a title and 4 rows of images, each row containing 3 images-->
+<div class="container" id="gallery"><!--class="container": Centers and adds padding around the whole section (probably using Bootstrap).-->
+  <h1>Our <span>Gallery</span></h1><!--Allows styling of the word "Gallery" separately — like giving it a different color or font weight.-->
+  <div class="row" style="margin-top: 30px;"><!--Creates a horizontal row of columns using Bootstrap's grid-->
+    
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100"><!--Each columncol-md-4: In Bootstrap, this makes each column take up 1/3 of the row on medium+ screens.
+      py-3 py-md-0: Adds vertical padding on small screens (py-3), but removes it on medium+ screens (py-md-0).-->
+      <div class="card"><!--card: Wraps each image in a card-style box — may have borders, shadows, or rounded corners depending on styling.-->
+        <a href="./images/manos.png" data-lightbox="gallery"> <!--Lightbox Viewer-->
+          <img src="./images/manos.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/Catimor.png" data-lightbox="gallery">
+          <img src="./images/Catimor.png"  alt=""> 
+        </a> 
+        
+        
+      </div>
+    </div>
+
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/paisaje1.png" data-lightbox="gallery">
+           <img src="./images/paisaje1.png"  alt="">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row" style="margin-top: 30px;">
+
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/flor2.png" data-lightbox="gallery">
+          <img src="./images/flor2.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/belleza.png" data-lightbox="gallery">
+          <img src="./images/belleza.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/corte1.png" data-lightbox="gallery">
+          <img src="./images/corte1.png" alt="">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row" style="margin-top: 30px;">
+ 
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/almacigo4.png" data-lightbox="gallery">
+          <img src="./images/almacigo4.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/almacigo5.png" data-lightbox="gallery">
+          <img src="./images/almacigo5.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/beneficio2.png" data-lightbox="gallery">
+          <img src="./images/beneficio2.png" alt="">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="row" style="margin-top: 30px;">
+
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/catacion1.png" data-lightbox="gallery">
+          <img src="./images/catacion1.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/beneficio3.png" data-lightbox="gallery">
+          <img src="./images/beneficio3.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4 py-3 py-md-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <a href="./images/produccion1.png" data-lightbox="gallery">
+          <img src="./images/produccion1.png" alt="">
+        </a>
+      </div>
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- End our gallary -->
+
+<!-- Start contact This is a <section> that creates a "Contact Us" area on your webpage, split into 2 main columns using Bootstrap grid:
+| Contact Form (left) | Info (right) |-->
+<section class="contact" id="contact">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-7"><!--Left Column: Contact Form (col-md-7)This part allows users to send a message.-->
+        <div class="heading6">Contact <span>Us</span></div><!--A styled heading, styled via heading6 in your CSS-->
+
+       <p>Please leave your name, email, phone number and <!--Instructions for users.-->
+        <br>message and will get back to you as soon as posible.
+       </p>
+
+       <form action="https://formspree.io/f/mwpldpzr" method="POST" id="contact-form"><!--<form> tag starts a form.action="..." tells the browser where to send the data when submitted.
+        In this case, it’s going to Formspree.method="POST" means the form will send data securely (not in the URL).
+        id="contact-form" lets you reference this form in JavaScript or CSS-->
+        <input class="form-control" type="text" name="name" placeholder="Name" required><br><!-- Input Fields ,"class=form control" is bootstrap, A text box for the user’s name
+        name="name" is the key that Formspree uses to label the input; placeholder="Name" is the light gray text that disappears when you type
+        required means the user must fill this out to submit the form. FORM CONTROL= When you add it to an input element, it:
+        Makes the element 100% wide inside its parent container,adds padding, border-radius, and light styling,applies consistent font size and spacing,
+        Ensures form elements look polished and aligned-->
+        <input class="form-control" type="email" name="email" placeholder="Email" required><br>
+        <input class="form-control" type="tel" name="phone" placeholder="Phone"><br><!--It’s optional (no required)-->
+        <textarea class="form-control" name="message" placeholder="Your message" rows="2"></textarea><br><!--This is a bigger text area for the actual message
+        rows="4" means it starts as 4 lines tall;name="message" tells Formspree it’s the user’s message-->
+        <button id="contact-btn" type="submit">Send Message</button><!--Button:A button the user clicks to submit the form;type="submit" tells the form: "Send everything now!"
+        id="contact-btn" allows styling or JavaScript connection -->
+        <p id="form-status"></p><!--This empty paragraph is where we can show a success or error message after the form is submitted-->
+      </form>
+    </div>
+
+      <div class="col-md-5" id="col"><!--Right Column: Contact Info (col-md-5)-->
+        <h1>Info</h1><!--This gives static info about the coffee farm.-->
+        <p><i class="fa-regular fa-envelope"></i> example@gmail.com</p><!--example@gmail.com (with envelope icon)-->
+        <p><i class="fa-solid fa-phone"></i> +337-554-6778</p><!--Phone number (with phone icon)-->
+       <p><i class="fa-solid fa-building-columns"></i> Las Brisas Coffee Plantation</p><!--Business name (with building icon)-->
+       <p style="margin-top: 60px;"> 
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- End contact -->
+
+
+  </div>
+ 
+  </div>
+
+  
+ <!-- Start footer -->
+ <footer id="footer">
+  <div class="footer-logo text-center"><img src="./images/logonegro.png" alt=""></div>
+  <div class="socail-links text-center">
+    <a href="https://x.com/"><i class="fa-brands fa-twitter"></i><a/>
+    <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"><i class="fa-brands fa-facebook-f"></i><a/>
+    <a href="https://www.instagram.com/accounts/login/?next=https%253A%252F%252Fwww.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a>
+  </div>
+  <div class="credite text-center">
+      Designed By <a href="#home"> Rafael Alvarez Schneider  (rdsalvarez@gmail.com)</a>
+  </div>
+  <div class="copyright text-center">
+    &copy; Copyright <strong><span>Las Brisas Coffee Plantation</span></strong>. All Rights Reserved
+</div>
+</footer>
+
+<!--End footer-->
+
+<!--arrow-->
+<a href="#" class="arrow"><i><img src="./images/up-arrow.png" alt="" width="50px"></i></a>
+
+
+   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Lightbox2 JS Clicking an image opens a full-screen popup with a larger version (super polished look)-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<!-- AOS JS for Animation(Animate On Scroll) is a small JavaScript library that adds scroll-based animations to your website.Makes elements,fade, slide,zoom,or flip into view as you scroll down the page. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+ 
+
+</script>
+<!--were the up arrow comes from-->
+<a href="https://www.flaticon.com/free-icons/arrowhead" title="arrowhead icons"></a>
+
+
+
+</body>
+
+</html>
